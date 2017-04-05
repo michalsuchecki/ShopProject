@@ -1,0 +1,44 @@
+Options FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^$                                          index.php [L]
+RewriteRule ^start$                                     index.php [L]
+
+RewriteRule ^search$                                    page_search.php [L]
+RewriteRule ^konto$                                     page_account.php [L]
+RewriteRule ^konto,([0-9]{1}+)/?$ 			page_account.php?subpage=$1 [L]
+
+RewriteRule ^kategoria,([0-9]{0,8}+)?,([a-zA-Z]+)?$                                     page_catalog.php?catid=$1&action=$2 [L]
+RewriteRule ^kategoria,([0-9]{0,8}+)?,([0-9]{0,8}+)?,([0-9]{0,8}+)?,([0-9]{0,8}+)?/?$   page_catalog.php?catid=$1&page=$2&show=$3&order=$4 [L]
+
+RewriteRule ^koszyk/?$                                  page_basket.php [L]
+RewriteRule ^koszyk,przelicz/?$                         page_basket.php?action=przelicz [L]
+RewriteRule ^koszyk,dodaj,([0-9]{6,8}+)/?$              page_basket.php?action=dodaj&prodid=$1 [L]
+RewriteRule ^koszyk,usun,([0-9]{6,8}+)/?$               page_basket.php?action=usun&prodid=$1 [L]
+
+RewriteRule ^produkt,nowy,([0-9]{0,8}+)/?$              page_product.php?catid=$1&action=add [L]
+RewriteRule ^produkt,dodaj,([0-9]{0,8}+)/?$             page_product.php?catid=$1&action=addproduct [L]
+RewriteRule ^produkt,usun,([0-9]{0,8}+)/?$              page_product.php?prodid=$1&action=delete [L]
+RewriteRule ^produkt,zmien,([0-9]{0,8}+)/?$             page_product.php?prodid=$1&action=change [L]
+RewriteRule ^komentuj,([0-9]{0,8}+)?/?$                 page_product.php?prodid=$1&action=comment [L]
+RewriteRule ^produkt,([0-9]{0,8}+),([0-9]{0,8}+)?/?$	page_product.php?catid=$1&prodid=$2 [L]
+
+RewriteRule ^zamowienie,potwierdzenie/?$                page_order.php?action=confirm [L]
+RewriteRule ^zamowienie,wyslij/?$                       page_order.php?action=send [L]
+
+RewriteRule ^rejestracja/?$                             page_login.php?subpage=register [L]
+RewriteRule ^rejestruj$                                 page_login.php?subpage=regme [L]
+RewriteRule ^logowanie/?$                               page_login.php?subpage=login [L]
+RewriteRule ^loguj/?$                                   page_login.php?subpage=logmein [L]
+RewriteRule ^wyloguj$                                   page_login.php?subpage=logmeout [L]
+
+RewriteRule ^przypomnij/?$                              page_login.php?subpage=remind [L]
+RewriteRule ^nowehaslo/?$                               page_login.php?subpage=newpass [L]
+
+RewriteRule ^reaktywuj/?$ 		                        page_login.php?subpage=reactive [L]
+RewriteRule ^nowykod/?$                                 page_login.php?subpage=newkey [L]
+RewriteRule ^aktywuj/([0-9a-zA-Z]+)$                    page_login.php?subpage=activate&akey=$1 [L]
+
+RewriteRule ^regulamin/?$	                            page_info.php?subpage=1 [L]
+RewriteRule ^dostawy/?$		                            page_info.php?subpage=2 [L]
+RewriteRule ^kontakt/?$ 	                            page_info.php?subpage=3 [L]

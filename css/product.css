@@ -1,0 +1,167 @@
+/*
+ Style dla produktów
+*/
+
+#product_contener
+{
+    width:768px;
+    float:right;
+}
+
+#product_div
+{
+    margin-left:auto;
+    margin-right: auto;
+    border: 1px solid #B3B3B3;
+    border-radius: 10px 10px 10px 10px;
+    width: 700px;
+}
+
+.product_label
+{
+    padding-top:10px;
+    border-radius: 10px 10px 0 0;
+    background-image:url(../Images/layout.gif);
+    width: 700px;
+    height: 35px;
+    font-size: 20px;
+}
+
+.product_row
+{
+    margin-left: 50px;
+    margin-bottom: 10px;
+    width: 600px;
+}
+
+#product_catdiv
+{
+    width: 400px;
+    height: 30px;  
+}
+
+#product_catlabel
+{
+   font-size: 16px; 
+   border-bottom: 1px solid #999;
+}
+
+#label_header
+{
+    font-size: 14px;
+    width: 700px;
+}
+
+.label_product
+{
+    text-align: left;
+    display: block;
+    float: left;
+    width: 100px;  
+}
+
+#prod_input
+{
+    width: 450px;
+}
+
+#prod_text
+{
+    width: 450px;
+    height: 300px;
+}
+
+/* ---------------------------------- */
+
+.label_header
+{  
+    padding-top:10px;
+    text-align: left;
+    font-size: 20px;
+    width:100%;
+    height:30px;
+    border-bottom:1px solid #999;
+}
+
+.admin_panel
+{
+    font-size:12px;
+    float:right;
+}
+
+.label2
+{
+    float:left;
+    color: #444;
+    font-family:cursive;
+    font-size: 20px;
+    text-align: left;
+    text-shadow: 2px 2px 5px #aaa;
+}
+
+.input_title
+{
+    float:left;
+    width:300px;
+    height:22px;
+}
+
+.input_price
+{
+    margin-top:5px;
+    margin-right:5px;
+}
+
+.prod_gallery_div
+{
+    
+}
+
+.ButtonContainer
+{
+    margin-left:330px;
+    float: left;
+    width:320px;
+    height:40px;
+}
+
+.ButtonFont a
+{
+    font-size:20px;
+    color:#FFF;
+}
+
+.ButtonNext
+{
+    padding-top:7px;
+    float:right;
+    height:33px;
+    width:150px;
+    background-image:url(../Images/black_next.png);
+}
+
+.ButtonNormal
+{
+    padding-top:7px;    
+    float:left;
+    height:33px;
+    width:150px;
+    background-image:url(../Images/black_button.png);    
+}
+
+.ButtonPrev
+{
+    padding-top:7px;    
+    float:left;
+    height:33px;
+    width:150px;
+    background-image:url(../Images/black_prev.png);
+}
+
+.ProductPromotion
+{
+    margin-left:5px;
+    float:left;
+    color:#F00;
+    height:20px;
+}
